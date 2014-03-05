@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Movies</title>
+  <link rel="stylesheet" href="movies.css"/>
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.1.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+
+<script src="../../spec/support/jquery.js"></script>
+<script src="../../spec/support/jquery.dataTables.js"></script>
+  <script src="../../spec/support/underscore.js"></script>
+  <script src="../../spec/support/backbone.js"></script>
+  <script src="../../backbone.localStorage.js"></script>
+
+
+  <script src="movies.js"></script>
+
+  <!-- Templates -->
+
+  <div class="container">
+      <h1>Movies Manager</h1>
+      <hr />
+      <div class="page"></div>
+  </div>
+  <script type="text/template" id="movie-list-template">
+      <h3>Movies List</h3>
+      <a href="#/new" class="btn btn-primary">New</a>
+      <a href="#/actors" class="btn btn-primary">Actors</a>
+      <a href="#/search" class="btn btn-primary">Search</a>
+      <hr />
+      <table class="table striped">
+          <thead>
+          <tr>
+              <th>Title</th><th>Year</th><th>Notes</th><th>Rating</th><th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <% _.each(movies, function(movie) { %>
+          <tr>
+              <td><%= htmlEncode(movie.title) %></td>
+              <td><%= htmlEncode(movie.year) %></td>
+              <td><%= htmlEncode(movie.notes) %></td>
+              <td><%= htmlEncode(movie.rating) %></td>
+
+              <td><a class="btn" href="#/edit/<%= movie.id %>">Edit</a></td>
+          </tr>
+          <% }); %>
+          </tbody>
+      </table>
+  </script>
+
+  <script type="text/template" id="edit-movie-template">
+      <form class="edit-movie-form">
+          <legend><%= movie ? 'Edit' : 'New' %> Movie</legend>
+          <ul>
+              <li>
+          <label>Title</label>
+          <input name="title" type="text" value="<%= movie ? movie.title : '' %>">
+              </li>
+              <li>
+          <label>Year</label>
+          <input name="year" type="text" value="<%= movie ? movie.year : '' %>">
+              </li>
+              <li>
+          <label>Notes</label>
+          <input name="notes" type="text" value="<%= movie ? movie.notes : '' %>">
+              </li>
+              <li>
+          <label>Rating</label>
+          <input name="rating" type="text" value="<%= movie ? movie.rating : '' %>">
+              </li>
+              <li>
+          <label>Gross Income</label>
+          <input name="gross" type="text" value="<%= movie ? movie.gross : '' %>">
+              </li>
+              <li>
+          <label>Director</label>
+          <input name="director" type="text" value="<%= movie ? movie.director : '' %>">
+              </li>
+              <li>
+          <label>Genre</label>
+          <input name="genre" type="text" value="<%= movie ? movie.genre : '' %>">
+              </li>
+          </ul>
+          <% if(movie) { %>
+          <input type="hidden" name="id" value="<%= movie.id %>" />
+          <% }; %>
+          <% if(actors) { %>
+              <% _.each(actors, function(actor) { %>
+
+          <label><a href="#/edit_actor/<%= actor.id %>"><%= htmlEncode(actor.firstname) %> <%= htmlEncode(actor.lastname) %></label></a>
+                <input type="checkbox" name="actor_<%= htmlEncode(actor.id) %>" value="<%= htmlEncode(actor.id) %>"
+
+                    <% if(associations) { %>
+                        <% if(jQuery.inArray( actor.id, associations ) > -1){ %>
+                            checked
+                        <% } %>
+
+                    <% }; %>
+          >
+              <% }); %>
+          <% }; %>
+          <hr />
+          <button type="submit" class="btn"><%= movie ? 'Update' : 'Create' %></button>
+      </form>
+      <% if(movie) { %>
+      <button data-movie-id="<%= movie.id %>" id='delete-movie' class="btn btn-danger delete">Delete</button>
+      <% }; %>
+
+      <a href='#'><button  class="btn btn-danger delete">Cancel</button></a>
+  </script>
+
+
+
+  <script type="text/template" id="actor-list-template">
+      <h3>Actors List</h3>
+      <a href="#/new_actor" class="btn btn-primary">New</a>
+      <a href="#" class="btn btn-primary">Movies</a>
+      <a href="#/search" class="btn btn-primary">Search</a>
+      <hr />
+      <table class="table striped">
+          <thead>
+          <tr>
+              <th>First Name</th><th>Last Name</th><th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <% _.each(actors, function(actor) { %>
+          <tr>
+              <td><%= htmlEncode(actor.firstname) %></td>
+              <td><%= htmlEncode(actor.lastname) %></td>
+
+              <td><a class="btn" href="#/edit_actor/<%= actor.id %>">Edit</a></td>
+          </tr>
+          <% }); %>
+          </tbody>
+      </table>
+  </script>
+
+
+  <script type="text/template" id="edit-actor-template">
+      <form class="edit-actor-form">
+          <legend><%= actor ? 'Edit' : 'New' %> Actor</legend>
+          <ul>
+              <li>
+          <label>First Name</label>
+          <input name="firstname" type="text" value="<%= actor ? actor.firstname : '' %>">
+              </li>
+              <li>
+          <label>Last Name</label>
+          <input name="lastname" type="text" value="<%= actor ? actor.lastname : '' %>">
+              </li>
+              <li>
+          <label>Gender</label>
+          <input name="gender" type="text" value="<%= actor ? actor.gender : '' %>">
+              </li>
+              <li>
+          <label>Date of Birth</label>
+          <input name="dob" type="text" value="<%= actor ? actor.dob : '' %>">
+              </li>
+          </ul>
+          <hr />
+          <button type="submit" class="btn"><%= actor ? 'Update' : 'Create' %></button>
+          <% if(actor) { %>
+          <input type="hidden" name="id" value="<%= actor.id %>" />
+          <% }; %>
+
+          <% if(movies) { %>
+          <% _.each(movies, function(movie) { %>
+
+          <a href="#/edit/<%= movie.id %>"><label><%= htmlEncode(movie.title) %> </label></a>
+          <input type="checkbox" name="movie_<%= htmlEncode(movie.id) %>" value="<%= htmlEncode(movie.id) %>"
+
+              <% if(associations) { %>
+                  <% if(jQuery.inArray( movie.id, associations ) > -1){ %>
+                  checked
+                  <% } %>
+              <% }; %>
+          >
+          <% }); %>
+          <% }; %>
+      </form>
+      <% if(actor) { %>
+      <button data-actor-id="<%= actor.id %>" id='delete-actor' class="btn btn-danger delete">Delete</button>
+      <% }; %>
+
+      <a href='#/actors'><button  class="btn btn-danger delete">Cancel</button></a>
+
+  </script>
+
+
+  <script type="text/template" id="search-movie-actor-template">
+      <h3>Search Movies and Actors</h3>
+      <a href="#" class="btn btn-primary">Movies</a>
+      <a href="#/actors" class="btn btn-primary">Actors</a>
+      <hr />
+
+      <table cellpadding="0" cellspacing="0" border="0" class="display" id="example">
+      <thead>
+      <tr>
+          <th>MovieActor</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="gradeX">
+          <td>Trident</td>
+      </tr>
+
+      <% _.each(links, function(link) { %>
+      <tr>
+          <td><a href=""<%= htmlEncode(link.href) %>><%=  htmlEncode(link.title) %></a></td>
+      </tr>
+      <% }); %>
+
+      </table>
+  </script>
+</body>
+</html>

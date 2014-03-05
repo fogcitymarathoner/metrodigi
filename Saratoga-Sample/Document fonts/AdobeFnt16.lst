@@ -1,0 +1,131 @@
+%!Adobe-FontList 1.16
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:C:\Users\marc\cake_apps_mysql\metrodigi\Saratoga-Sample\Document fonts\.DS_Store
+FileModTime:1310148716
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:HelveticaNeue
+FamilyName:Helvetica Neue
+StyleName:Regular
+FullName:Helvetica Neue
+MenuName:Helvetica Neue
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\marc\cake_apps_mysql\metrodigi\Saratoga-Sample\Document fonts\Helvetica Neue.ttf
+DataFormat:sfntData
+FileLength:60976
+FileModTime:1336623116
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Helvetica Neue
+NameArray:0,Win,1,Helvetica Neue
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:TradeGothic-BoldTwo
+FamilyName:Trade Gothic
+StyleName:Bold No. 2
+FullName:Trade Gothic Bold No. 2
+MenuName:TradeGothic
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:C:\Users\marc\cake_apps_mysql\metrodigi\Saratoga-Sample\Document fonts\TradeGothic-BoldTwo.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:17620
+FileModTime:939425660
+WeightClass:700
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,18,TradeGothic BoldTwo
+NameArray:0,Mac,4,Trade Gothic Bold No. 2
+NameArray:0,Win,1,TradeGothic
+NameArray:0,Win,16,Trade Gothic
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:TradeGothic-Light
+FamilyName:Trade Gothic
+StyleName:Light
+FullName:Trade Gothic Light
+MenuName:TradeGothic Light
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\marc\cake_apps_mysql\metrodigi\Saratoga-Sample\Document fonts\TradeGothic-Light.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:16884
+FileModTime:939425666
+WeightClass:300
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,18,TradeGothic Light
+NameArray:0,Mac,4,Trade Gothic Light
+NameArray:0,Win,1,TradeGothic Light
+NameArray:0,Win,16,Trade Gothic
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:TradeGothic-LightOblique
+FamilyName:Trade Gothic
+StyleName:Light Oblique
+FullName:Trade Gothic Light Oblique
+MenuName:TradeGothic Light
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:C:\Users\marc\cake_apps_mysql\metrodigi\Saratoga-Sample\Document fonts\TradeGothic-LightOblique.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:17000
+FileModTime:939425666
+WeightClass:300
+WidthClass:5
+AngleClass:1
+NameArray:0,Mac,18,TradeGothic LightOblique
+NameArray:0,Mac,4,Trade Gothic Light Oblique
+NameArray:0,Win,1,TradeGothic Light
+NameArray:0,Win,16,Trade Gothic
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:TradeGothic
+FamilyName:Trade Gothic
+StyleName:Medium
+FullName:Trade Gothic Medium
+MenuName:TradeGothic
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\marc\cake_apps_mysql\metrodigi\Saratoga-Sample\Document fonts\TradeGothic.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:17132
+FileModTime:939425658
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,18,TradeGothic
+NameArray:0,Mac,4,Trade Gothic Medium
+NameArray:0,Win,1,TradeGothic
+NameArray:0,Win,16,Trade Gothic
+%EndFont
+

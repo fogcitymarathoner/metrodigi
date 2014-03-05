@@ -1,0 +1,106 @@
+%!Adobe-FontList 1.13
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:HelveticaNeue
+FamilyName:Helvetica Neue
+StyleName:Regular
+MenuName:Helvetica Neue
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Helvetica Neue
+WritingScript:Roman
+OutlineFileName:\Helvetica Neue.ttf
+DataFormat:sfntData
+FileLength:60976
+FileModTime:1336597916
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:TradeGothic-BoldTwo
+FamilyName:Trade Gothic
+StyleName:Bold No. 2
+MenuName:TradeGothic
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Trade Gothic Bold No. 2
+WritingScript:Roman
+OutlineFileName:\TradeGothic-BoldTwo.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:17620
+FileModTime:939400459
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:TradeGothic-Light
+FamilyName:Trade Gothic
+StyleName:Light
+MenuName:TradeGothic Light
+StyleBits:0
+WeightClass:300
+WidthClass:5
+AngleClass:0
+FullName:Trade Gothic Light
+WritingScript:Roman
+OutlineFileName:\TradeGothic-Light.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:16884
+FileModTime:939400465
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:TradeGothic-LightOblique
+FamilyName:Trade Gothic
+StyleName:Light Oblique
+MenuName:TradeGothic Light
+StyleBits:1
+WeightClass:300
+WidthClass:5
+AngleClass:1
+FullName:Trade Gothic Light Oblique
+WritingScript:Roman
+OutlineFileName:\TradeGothic-LightOblique.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:17000
+FileModTime:939400466
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:TradeGothic
+FamilyName:Trade Gothic
+StyleName:Medium
+MenuName:TradeGothic
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Trade Gothic Medium
+WritingScript:Roman
+OutlineFileName:\TradeGothic.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:17132
+FileModTime:939400457
+%EndFont
+
